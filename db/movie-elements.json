@@ -1,5 +1,6 @@
 {
-	"actors": [{
+	"movieElements": [
+		{
 			"id": "actor01",
 			"catergoryId": "cat1",
 			"name": "Charles Chaplin",
@@ -118,9 +119,8 @@
 			"catergoryId": "cat1",
 			"name": "May McAvoy",
 			"cost": "10000"
-		}
-	],
-	"animals": [{
+		},
+		{
 			"id": "animal01",
 			"catergoryId": "cat2",
 			"name": "Tiger",
@@ -239,9 +239,8 @@
 			"catergoryId": "cat2",
 			"name": "Anteater",
 			"cost": "10000"
-		}
-	],
-	"specialEffects": [{
+		},
+	  {
 			"id": "spEff01",
 			"catergoryId": "cat3",
 			"name": "Explosion",
@@ -360,9 +359,8 @@
 			"catergoryId": "cat3",
 			"name": "Frank from around the corner",
 			"cost": "10000"
-		}
-	],
-	"location": [{
+		},
+		{
 			"id": "loc01",
 			"catergoryId": "cat4",
 			"name": "Christ Church College, Oxford",
