@@ -1,5 +1,6 @@
 {
-	"actors": [{
+	"actors": [
+		{
 			"id": "actor01",
 			"catergoryId": "cat1",
 			"name": "Charles Chaplin",
@@ -120,7 +121,8 @@
 			"cost": "10000"
 		}
 	],
-	"animals": [{
+	"animals": [
+		{
 			"id": "animal01",
 			"catergoryId": "cat2",
 			"name": "Tiger",
@@ -241,7 +243,8 @@
 			"cost": "10000"
 		}
 	],
-	"specialEffects": [{
+	"specialEffects": [
+		{
 			"id": "spEff01",
 			"catergoryId": "cat3",
 			"name": "Explosion",
@@ -362,7 +365,8 @@
 			"cost": "10000"
 		}
 	],
-	"location": [{
+	"location": [
+		{
 			"id": "loc01",
 			"catergoryId": "cat4",
 			"name": "Christ Church College, Oxford",
