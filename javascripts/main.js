@@ -1,3 +1,3 @@
-const dataGatekeeper = require('./dataGatekeeper');
+const startApplication = require('./dataGatekeeper');
 
-dataGatekeeper();
+startApplication();
