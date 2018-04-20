@@ -4,7 +4,8 @@ const connectEventListeners = () => {
   document.getElementById('set-budget-btn').addEventListener('click', enableApplication);
 };
 
-const enableApplication = () => {
+const enableApplication = (e) => {
+  e.preventDefault();
   writeMovieElementsToDom();
 };
 
