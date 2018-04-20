@@ -2,7 +2,7 @@ let movieElements = [];
 let catagories = [];
 
 const getMovieElements = () => {
-  return movieElements;
+  return movieElements.movieElements;
 };
 
 const setMovieElements = (data) => {
@@ -10,7 +10,7 @@ const setMovieElements = (data) => {
 };
 
 const getCatagories = () => {
-  return catagories;
+  return catagories.catagories;
 };
 
 const setCatagories = (data) => {

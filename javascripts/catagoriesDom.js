@@ -1,7 +1,7 @@
 const data = require('./data');
 
 const writeCatagoriesToDom = () => {
-  const myCatagories = data.getCatagories().catagories;
+  const myCatagories = data.getCatagories();
   let domString = '';
   myCatagories.forEach((catagory) => {
     domString += `<div id='${catagory.id}'>`;
