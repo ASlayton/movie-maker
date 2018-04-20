@@ -1,3 +1,5 @@
-const dataGatekeeper = require('./dataGatekeeper');
+const startApplication = require('./dataGatekeeper');
+const connectEventListeners = require('./events');
 
-dataGatekeeper();
+startApplication();
+connectEventListeners();
