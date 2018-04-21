@@ -4,7 +4,7 @@ const writeCatagoriesToDom = () => {
   const myCatagories = data.getCatagories();
   let domString = '';
   myCatagories.forEach((catagory) => {
-    domString += `<div id='${catagory.id}'>`;
+    domString += `<div id='${catagory.id}' class='col-md-12'>`;
     domString += `<h1>${catagory.catagoryName}</h1>`;
     domString += `</div>`;
   });
