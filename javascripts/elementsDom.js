@@ -7,9 +7,8 @@ const writeMovieElementsToDom = () => {
   myMovieElements.forEach((element) => {
     catagories.forEach((catagory) => {
       if (element.catagoryId === catagory.id) {
-        document.getElementById(catagory.id).innerHTML += `<div class="checkbox">
-        <label><input type="checkbox" value="${element.cost}">${element.name}</label>
-      </div>`;
+        document.getElementById(catagory.id).innerHTML += `<div class='checkbox col-sm-3'>
+        <label><input type="checkbox" value="${element.cost}" class='imaCheckBox'>${element.name}</label></div>`;
       };
     });
   });

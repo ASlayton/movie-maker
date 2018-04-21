@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="navbar-form navbar-right">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Budget Here...">
+            <input type="text" class="form-control" placeholder="Your Budget Here..." id="budgetAmt">
           </div>
           <button class="btn btn-default" id="set-budget-btn">Set Budget</button>
         </div>
@@ -33,8 +33,11 @@
   <div id="instructions">
     <p>Please set your budget to begin budgeting your super duper awesome movie.</p>
   </div>
-  <div id="catagory-display"></div>
-  <div id="receipt"></div>
+  <div id="progress-bar-display" class="col-sm-12"></div>
+  <div id="catagory-display" class="col-sm-8"></div>
+  <div id="receipt" class="col-sm-4">
+    <h1 id="remaining-budget"></h1>
+  </div>
 
   <!-- SCRIPT LINKS -->
   <script
