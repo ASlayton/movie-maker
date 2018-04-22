@@ -1,8 +1,8 @@
-const xhr = (successFunction, errorFunction, fileName) => {
+const xhr = (successFunction, errorFunction, filename) => {
   const myRequest = new XMLHttpRequest();
   myRequest.addEventListener('load', successFunction);
   myRequest.addEventListener('error', errorFunction);
-  myRequest.open('GET', `/db/${fileName}`);
+  myRequest.open('GET', `/db/${filename}`);
   myRequest.send();
 };
 

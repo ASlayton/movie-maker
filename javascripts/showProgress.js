@@ -1,17 +1,15 @@
-const showProgress = (budget, width) => {
-  document.getElementById('instructions').innerHTML = '';
-  let progressString = '';
-  progressString += `<div class='progress'>`;
-  progressString +=   `<div class='progress-bar' id='myProgress' role='progressbar' aria-valuenow='${budget}' aria-valuemin='0' aria-valuemax='${budget}' style='width:${width}%;'>`;
-  progressString +=     `<span class='sr-only'></span>`;
-  progressString +=   `</div>`;
-  progressString += `</div>`;
+const writeToDom = require('./writeToDom');
 
-  writeProgressBar(budget, 'remaining-budget');
-  writeProgressBar(progressString, 'progress-bar-display');
+const showProgress = (budget, remainingBudget) => {
+  const percentage = Math.round((remainingBudget / budget) * 100);
+  console.log(percentage);
+  let domString = '';
+  domString += `<div class='progress'>`;
+  domString +=   `<div class="progress-bar" role='progressbar' aria-valuenow='${remainingBudget}' aria-valuemin='0' aria-valuemax='${budget}' style='width: ${percentage}%;'>`;
+  domString += `${percentage}% Budget Remaining`;
+  domString +=   `</div>`;
+  domString += `</div>`;
+  writeToDom(domString, 'progress-bar-display');
 };
 
-const writeProgressBar = (myString, myElement) => {
-  document.getElementById(myElement).innerHTML = myString;
-};
-module.exports = showProgress;
+module.export = showProgress;
