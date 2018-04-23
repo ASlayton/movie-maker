@@ -2,6 +2,7 @@ let budget = 0;
 let remainingBudget = 0;
 let catagories = [];
 let movieElements = [];
+const selectedElements = [];
 
 const setBudget = (data) => {
   budget = data;
@@ -39,6 +40,26 @@ const getMovieElements = () => {
   return myMovieElements;
 };
 
+const setSelectedElements = (data) => {
+  if (!selectedElements.includes(data)) {
+    selectedElements.push(data);
+  };
+};
+
+const removeSelectedElement = (data) => {
+  const catagories = getCatgories();
+  const movieElements = document.getElementsByClassName('movie-element');
+
+
+  };
+  ${cat.id}-element
+};
+
+const getSelectedElements = () => {
+  const mySelectedElements = selectedElements;
+  return mySelectedElements;
+};
+
 module.exports = {
   setBudget,
   getBudget,
@@ -48,4 +69,6 @@ module.exports = {
   getCatgories,
   setMovieElements,
   getMovieElements,
+  setSelectedElements,
+  getSelectedElements,
 };

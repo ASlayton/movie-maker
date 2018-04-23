@@ -1,5 +1,5 @@
 const data = require('./data');
-const writeToDom = require('./writeToDom');
+const showProgress = require('./progressBar');
 
 const enableApplication = (e) => {
   e.preventDefault();
@@ -7,6 +7,7 @@ const enableApplication = (e) => {
   const budget = document.getElementById('budgetAmt').value;
   data.setRemainingBudget(budget);
   const remainingBudget = data.getRemainingBudget();
+  document.getElementById('remaining-budget').innerHTML = `${remainingBudget}`;
   data.setBudget(budget);
   showProgress(budget, remainingBudget);
 };
@@ -16,15 +17,6 @@ const enableCheckboxes = () => {
   for (let i = 0; i < getCheckboxes.length; i++) {
     getCheckboxes[i].disabled = false;
   };
-};
-
-const showProgress = (budget, remainingBudget) => {
-  let domString = '';
-  domString += `<div class="progress">`;
-  domString +=   `<div class="progress-bar" role="progressbar" aria-valuenow='${remainingBudget}' aria-valuemin="0" aria-valuemax='${budget}'>`;
-  domString +=   `</div>`;
-  domString += `</div>`;
-  writeToDom(domString, 'progress-bar-display');
 };
 
 module.exports = enableApplication;
