@@ -4,20 +4,19 @@ const showProgress = require('./progressBar');
 const updateApp = (e) => {
   const elementValue = e.target.value;
   const budget = data.getBudget();
+  const checkedElement = e.target.parentNode.parentNode.children[0].innerHTML;
   let remainingBudget = data.getRemainingBudget();
   if (e.target.checked === true) {
     remainingBudget = (remainingBudget * 1) - (elementValue * 1);
     data.setRemainingBudget(remainingBudget);
     showProgress(budget, remainingBudget);
-    const checkedElement = e.target.parentNode.parentNode.children[0].innerHTML;
     data.setSelectedElements(checkedElement);
+
   } else {
     remainingBudget = (remainingBudget * 1) + (elementValue * 1);
     data.setRemainingBudget(remainingBudget);
     showProgress(budget, remainingBudget);
-    const myParent = e.target.parentNode.parentNode.id;
-    const elementToRemove = e.target.parentNode.parentNode.children[0].innerHTML;
-    data.removeSelectedElement(myParent, elementToRemove);
+    data.removeSelectedElement(checkedElement);
   };
   document.getElementById('receipt').children[0].innerHTML = `${remainingBudget}`;
   printReceipt();
@@ -25,7 +24,7 @@ const updateApp = (e) => {
 };
 
 const printReceipt = () => {
-  const selectedElements = data.getSelectedElements();
+  const selectedElements = data.writableElements();
   document.getElementById('item-list').innerHTML = '';
   for (let i = 0; i < selectedElements.length; i++) {
     document.getElementById('item-list').innerHTML += `<p>${selectedElements[i]}</p>`;

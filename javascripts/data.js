@@ -41,26 +41,31 @@ const getMovieElements = () => {
 };
 
 const setSelectedElements = (data) => {
-  if (!selectedElements.includes(data)) {
-    selectedElements.push(data);
-  };
+  selectedElements.push(data);
 };
 
 // MOVE TO DATA PAGE WHEN DONE
-const removeSelectedElement = (parent, data) => {
-  // const myChildren = document.getElementById(parent).childElementCount;
-
-  // if (selectedElements.contains(data)) {
-  //   selectedElements.indexOf(data);
-  // }
-  console.log('parent: ', parent);
-  console.log('data: ', data);
+const removeSelectedElement = (data) => {
+  if (selectedElements.indexOf(data) > -1) {
+    const elementToRemove = selectedElements.indexOf(data);
+    selectedElements.splice(elementToRemove, 1);
+  };
   console.log('selectedElements: ', selectedElements);
 };
 
 const getSelectedElements = () => {
   const mySelectedElements = selectedElements;
   return mySelectedElements;
+};
+
+const writableElements = () => {
+  const writeElements = [];
+  selectedElements.forEach((element) => {
+    if (writeElements.indexOf(element) === -1) {
+      writeElements.push(element);
+    };
+  });
+  return writeElements;
 };
 
 module.exports = {
@@ -75,4 +80,5 @@ module.exports = {
   setSelectedElements,
   getSelectedElements,
   removeSelectedElement,
+  writableElements,
 };
