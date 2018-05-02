@@ -46,13 +46,16 @@ const setSelectedElements = (data) => {
   };
 };
 
-const removeSelectedElement = (data) => {
-  const catagories = getCatgories();
-  const movieElements = document.getElementsByClassName('movie-element');
+// MOVE TO DATA PAGE WHEN DONE
+const removeSelectedElement = (parent, data) => {
+  // const myChildren = document.getElementById(parent).childElementCount;
 
-
-  };
-  ${cat.id}-element
+  // if (selectedElements.contains(data)) {
+  //   selectedElements.indexOf(data);
+  // }
+  console.log('parent: ', parent);
+  console.log('data: ', data);
+  console.log('selectedElements: ', selectedElements);
 };
 
 const getSelectedElements = () => {
@@ -71,4 +74,5 @@ module.exports = {
   getMovieElements,
   setSelectedElements,
   getSelectedElements,
+  removeSelectedElement,
 };

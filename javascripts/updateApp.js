@@ -15,7 +15,9 @@ const updateApp = (e) => {
     remainingBudget = (remainingBudget * 1) + (elementValue * 1);
     data.setRemainingBudget(remainingBudget);
     showProgress(budget, remainingBudget);
-    data.removeSelectedElement();
+    const myParent = e.target.parentNode.parentNode.id;
+    const elementToRemove = e.target.parentNode.parentNode.children[0].innerHTML;
+    data.removeSelectedElement(myParent, elementToRemove);
   };
   document.getElementById('receipt').children[0].innerHTML = `${remainingBudget}`;
   printReceipt();
