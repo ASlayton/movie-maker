@@ -7,9 +7,11 @@ const enableApplication = (e) => {
   const budget = document.getElementById('budgetAmt').value;
   data.setRemainingBudget(budget);
   const remainingBudget = data.getRemainingBudget();
-  document.getElementById('remaining-budget').innerHTML = `${remainingBudget}`;
+  document.getElementById('remaining-budget').innerHTML = `Remaining Budget: $${remainingBudget}`;
   data.setBudget(budget);
   showProgress(budget, remainingBudget);
+  document.getElementById('instructions').classList.add('hide');
+  document.getElementById('set-budget-btn').disabled = true;
 };
 
 const enableCheckboxes = () => {

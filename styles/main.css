@@ -1,11 +1,15 @@
-#receipt {
-  border: 1px solid black;
-}
-
 label {
   height: 40px;
 }
 
 .col-md-3 {
   margin-top: 0;
+}
+
+.greenlight {
+  color: green;
+}
+
+.redlight {
+  color: crimson;
 }
