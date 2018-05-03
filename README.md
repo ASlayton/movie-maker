@@ -12,8 +12,11 @@ A basic app listing various movie elements, keeping a running budget
 
 ## Screenshots
 
-![Page on- load]()
+![Page on- load](https://github.com/ASlayton/movie-maker/blob/master/screenshots/pic1.png)
 
+![Page success](https://github.com/ASlayton/movie-maker/blob/master/screenshots/pic2.png)
+
+![Page not ready](https://github.com/ASlayton/movie-maker/blob/master/screenshots/pic3.png)
 ___
 ## Running The Project
 1. Clone down this repo and CD into project.
